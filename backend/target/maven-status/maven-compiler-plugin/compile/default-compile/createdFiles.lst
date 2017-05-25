@@ -1,0 +1,15 @@
+io\thingsboardlogic\persistence\impl\WatcherPersistenceImplCassandra.class
+io\thingsboardlogic\business\impl\ThingsboardlogicBusinessImpl.class
+io\thingsboardlogic\model\StartStopWatcherDto.class
+io\thingsboardlogic\presentation\RestThingsboardLogic.class
+io\thingsboardlogic\model\SaveWatcherDto.class
+io\thingsboardlogic\model\Bufferable.class
+io\thingsboardlogic\model\EditWatcherDto.class
+io\thingsboardlogic\business\ThingsboardlogicBusiness.class
+io\thingsboardlogic\util\Utils.class
+io\thingsboardlogic\app\ThingsboardLogicApplication.class
+io\thingsboardlogic\model\Watcher.class
+io\thingsboardlogic\model\WatcherDao.class
+io\thingsboardlogic\persistence\WatcherPersistence.class
+io\thingsboardlogic\presentation\impl\RestThingsboardLogicImpl.class
+io\thingsboardlogic\model\WatcherDto.class

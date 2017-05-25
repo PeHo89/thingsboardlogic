@@ -1,0 +1,56 @@
+<my-header></my-header>
+<div class="container">
+  <div class="col-md-6 col-md-offset-3">
+    <label>Available Watcher</label>
+    <p *ngIf="watcherList.length == 0">There are currently no watcher available.</p>
+    <div *ngIf="watcherList.length != 0">
+      <div class="list-group" *ngFor="let watcher of watcherList">
+          <a (click)="loadWatcherForModal(watcher.watcherId)" data-toggle="modal" data-target="#watcherModal" class="list-group-item {{watcher.active ? 'list-group-item-success' : 'list-group-item-danger'}}"><span class="badge">{{watcher.active ? 'active' : 'not active'}}</span>{{watcher.watcherName}}</a><br/><button (click)="startWatcher(watcher.watcherId)" [disabled]="watcher.active" class="btn btn-primary">Start</button> <button (click)="stopWatcher(watcher.watcherId)" [disabled]="!watcher.active" class="btn btn-primary">Stop</button> <button routerLink="/edit/{{watcher.watcherId}}" class="btn btn-primary">Edit</button> <button data-toggle="modal" data-target="#deleteWatcherModal" (click)="prepareDelete(watcher.watcherId, watcher.watcherName)" class="btn btn-primary">Delete</button>
+      </div>
+    </div>
+    <hr />
+    <button routerLink="/add" class="btn btn-primary">Add</button>
+  </div>
+</div>
+
+<div id="watcherModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">{{watcherForModal.watcherName}}</h4>
+      </div>
+      <div class="modal-body">
+        <p><b>Source device id</b><br>{{watcherForModal.sourceDeviceId}}</p>
+        <p><b>Source telemetry keys</b><br>{{watcherForModal.sourceTelemetryKeys}}</p>
+        <p><b>Boolean logic</b><br>{{watcherForModal.booleanLogic}}</p>
+        <p><b>Time granularity in ms</b><br>{{watcherForModal.timeGranularity}}</p>
+        <p><b>Target device id</b><br>{{watcherForModal.targetDeviceId}}</p>
+        <p><b>Message for true evaluation of boolean logic</b><br>{{watcherForModal.messageTrue}}</p>
+        <p><b>Message for false evaluation of boolean logic</b><br>{{watcherForModal.messageFalse}}</p>
+        <p><b>State</b><br>{{watcherForModal.active ? 'active' : 'not active'}}</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="deleteWatcherModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button (click)="prepareDelete('', '')" type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Delete watcher</h4>
+      </div>
+      <div class="modal-body">
+        <p>Are you sure you want to delete the watcher <b>{{watcherNameToDelete}}</b>?</p>
+      </div>
+      <div class="modal-footer">
+        <button (click)="deleteWatcher()" type="button" class="btn btn-danger" data-dismiss="modal">Delete</button>
+        <button (click)="prepareDelete('', '')" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

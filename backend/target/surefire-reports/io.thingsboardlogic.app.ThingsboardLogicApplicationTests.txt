@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: io.thingsboardlogic.app.ThingsboardLogicApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.089 sec - in io.thingsboardlogic.app.ThingsboardLogicApplicationTests

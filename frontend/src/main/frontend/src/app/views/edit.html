@@ -1,0 +1,43 @@
+<my-header></my-header>
+<div class="container">
+  <form (ngSubmit)="editWatcher()" #form="ngForm" class="col-md-6 col-md-offset-3">
+    <div class="form-group">
+      <label for="inputsourcedeviceid">Device id of source device</label>
+      <p id="inputsourcedeviceid">{{watcherToEdit.sourceDeviceId}}</p>
+    </div>
+    <div class="form-group">
+      <label for="sourcetelemetrykeys">Available telemetry keys of source device</label>
+      <p id="sourcetelemetrykeys">{{watcherToEdit.sourceTelemetryKeys}}</p>
+    </div>
+    <div class="form-group {{booleanlogicValid ? '' : 'has-error has-feedback'}}">
+      <label for="booleanlogic">Boolean logic</label>
+      <input type="text" (change)="resetBooleanlogicValid()" (keyup)="resetBooleanlogicValid()" name="booleanlogic" [(ngModel)]="watcherToEdit.booleanLogic" class="form-control" id="booleanLogic" placeholder="e.g.: light > 50 &amp;&amp; motion == 1" required="required" />
+      <span *ngIf="!booleanlogicValid" class="glyphicon glyphicon-remove form-control-feedback"></span>
+    </div>
+    <div class="form-group {{timegranularityValid ? '' : 'has-error has-feedback'}}">
+      <label for="timegranularity">Time granularity in ms</label>
+      <input type="number" (change)="resetTimegranularityValid()" (keyup)="resetTimegranularityValid()" name="timegranularity" [(ngModel)]="watcherToEdit.timeGranularity" class="form-control" id="timegranularity" placeholder="e.g.: 50" required="required" />
+      <span *ngIf="!timegranularityValid" class="glyphicon glyphicon-remove form-control-feedback"></span>
+    </div>
+    <div class="form-group">
+      <label for="inputtargetdeviceid">Device id of target device</label>
+      <p id="inputtargetdeviceid">{{watcherToEdit.targetDeviceId}}</p>
+    </div>
+    <div class="form-group {{messagetrueValid ? '' : 'has-error has-feedback'}}">
+      <label for="messagetrue">Message for true evaluation of boolean logic</label>
+      <input type="text" (change)="resetMessagetrueValid()" (keyup)="resetMessagetrueValid()" name="messagetrue" [(ngModel)]="watcherToEdit.messageTrue" class="form-control" id="messagetrue" placeholder='e.g.: {"method":"setGpioStatus","params":{"pin":12,"enabled":true}}' required="required" />
+      <span *ngIf="!messagetrueValid" class="glyphicon glyphicon-remove form-control-feedback"></span>
+    </div>
+    <div class="form-group {{messagefalseValid ? '' : 'has-error has-feedback'}}">
+      <label for="messagefalse">Message for false evaluation of boolean logic</label>
+      <input type="text" (change)="resetMessagefalseValid()" (keyup)="resetMessagefalseValid()" name="messagefalse" [(ngModel)]="watcherToEdit.messageFalse" class="form-control" id="messagefalse" placeholder='e.g.: {"method":"setGpioStatus","params":{"pin":12,"enabled":false}}' required="required" />
+      <span *ngIf="!messagefalseValid" class="glyphicon glyphicon-remove form-control-feedback"></span>
+    </div>
+    <div class="form-group {{watchernameValid ? '' : 'has-error has-feedback'}}">
+      <label for="watchername">Name of watcher</label>
+      <input type="text" (change)="resetWatchernameValid()" (keyup)="resetWatchernameValid()" name="watchername" [(ngModel)]="watcherToEdit.watcherName" class="form-control" id="watchername" placeholder="e.g.: Motion detection" required="required" />
+      <span *ngIf="!watchernameValid" class="glyphicon glyphicon-remove form-control-feedback"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+  </form>
+</div>

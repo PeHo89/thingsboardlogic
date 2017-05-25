@@ -1,0 +1,15 @@
+C:\Users\peter\Desktop\Repos\bakkarbeit\thingsboard-logic\backend\src\main\java\io\thingsboardlogic\app\ThingsboardLogicApplication.java
+C:\Users\peter\Desktop\Repos\bakkarbeit\thingsboard-logic\backend\src\main\java\io\thingsboardlogic\model\StartStopWatcherDto.java
+C:\Users\peter\Desktop\Repos\bakkarbeit\thingsboard-logic\backend\src\main\java\io\thingsboardlogic\model\Bufferable.java
+C:\Users\peter\Desktop\Repos\bakkarbeit\thingsboard-logic\backend\src\main\java\io\thingsboardlogic\model\Watcher.java
+C:\Users\peter\Desktop\Repos\bakkarbeit\thingsboard-logic\backend\src\main\java\io\thingsboardlogic\model\WatcherDao.java
+C:\Users\peter\Desktop\Repos\bakkarbeit\thingsboard-logic\backend\src\main\java\io\thingsboardlogic\presentation\RestThingsboardLogic.java
+C:\Users\peter\Desktop\Repos\bakkarbeit\thingsboard-logic\backend\src\main\java\io\thingsboardlogic\business\impl\ThingsboardlogicBusinessImpl.java
+C:\Users\peter\Desktop\Repos\bakkarbeit\thingsboard-logic\backend\src\main\java\io\thingsboardlogic\model\WatcherDto.java
+C:\Users\peter\Desktop\Repos\bakkarbeit\thingsboard-logic\backend\src\main\java\io\thingsboardlogic\model\SaveWatcherDto.java
+C:\Users\peter\Desktop\Repos\bakkarbeit\thingsboard-logic\backend\src\main\java\io\thingsboardlogic\util\Utils.java
+C:\Users\peter\Desktop\Repos\bakkarbeit\thingsboard-logic\backend\src\main\java\io\thingsboardlogic\model\EditWatcherDto.java
+C:\Users\peter\Desktop\Repos\bakkarbeit\thingsboard-logic\backend\src\main\java\io\thingsboardlogic\persistence\impl\WatcherPersistenceImplCassandra.java
+C:\Users\peter\Desktop\Repos\bakkarbeit\thingsboard-logic\backend\src\main\java\io\thingsboardlogic\business\ThingsboardlogicBusiness.java
+C:\Users\peter\Desktop\Repos\bakkarbeit\thingsboard-logic\backend\src\main\java\io\thingsboardlogic\presentation\impl\RestThingsboardLogicImpl.java
+C:\Users\peter\Desktop\Repos\bakkarbeit\thingsboard-logic\backend\src\main\java\io\thingsboardlogic\persistence\WatcherPersistence.java

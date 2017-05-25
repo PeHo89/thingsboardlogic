@@ -1,0 +1,44 @@
+<my-header></my-header>
+<div class="container">
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Thingsboardlogic</h1>
+      <p>This is an application for adding more functionality to Thingsboard.io!</p>
+      <p><small>E.g. turn on GPIO 18 on Raspberry Pi 2, if temperature sensor from Latte Panda is more than 50 degree centrigrade</small></p>
+      <p>Try it!</p>
+    </div>
+  </div>
+  <div class="container">
+    <form (ngSubmit)="login()" #form="ngForm" class="form col-md-6 col-md-offset-3">
+      <div class="form-group {{emailValid ? '' : 'has-error has-feedback'}}">
+        <label for="inputEmail">Email</label>
+        <input type="email" (change)="resetEmailValid()" (keyup)="resetEmailValid()" name="email" [(ngModel)]="email" class="form-control" id="inputEmail" placeholder="e.g.: max.mustermann@internet.com" required="required" />
+        <span *ngIf="!emailValid" class="glyphicon glyphicon-remove form-control-feedback"></span>
+        <small class="form-text text-muted">The user at the Thingsboard server.</small>
+      </div>
+
+      <div class="form-group {{passwordValid ? '' : 'has-error has-feedback'}}">
+        <label for="inputPassword">Password</label>
+        <input type="password" (change)="resetPasswordValid()" (keyup)="resetPasswordValid()" name="password" [(ngModel)]="password" class="form-control" id="inputPassword" placeholder="e.g.: 123456" required="required" />
+        <span *ngIf="!passwordValid" class="glyphicon glyphicon-remove form-control-feedback"></span>
+        <small class="form-text text-muted">The password for the user at the Thingsboard server.</small>
+      </div>
+
+      <div class="form-group {{hostValid ? '' : 'has-error has-feedback'}}">
+        <label for="inputHost">Host</label>
+        <input type="text" (change)="resetHostValid()" (keyup)="resetHostValid()" name="host" [(ngModel)]="host" class="form-control" id="inputHost" placeholder="e.g.: localhost" required="required" />
+        <span *ngIf="!hostValid" class="glyphicon glyphicon-remove form-control-feedback"></span>
+        <small class="form-text text-muted">The address of the Thingsboard server.</small>
+      </div>
+
+      <div class="form-group {{portValid ? '' : 'has-error has-feedback'}}">
+        <label for="inputPort">Port</label>
+        <input type="number" (change)="resetPortValid()" (keyup)="resetPortValid()" name="port" [(ngModel)]="port" min=0 max="65535" class="form-control" id="inputPort" placeholder="e.g.: 8080" required="required" />
+        <span *ngIf="!portValid" class="glyphicon glyphicon-remove form-control-feedback"></span>
+        <small class="form-text text-muted">The port of the Thingsboard server.</small>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+  </div>
+</div>
