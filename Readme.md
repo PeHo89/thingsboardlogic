@@ -73,6 +73,13 @@ Some useful features to advance Thingsboardlogic:
 * Show more detailed infos about Watcher (responses from Watcher inputs and outputs, error messages, uptime, downtime, etc.) on separatre Watcher page
 * ...
 
+## Look and Feel
+![Alt text](./screenshots/login.png "Thingsboardlogic Login")
+
+![Alt text](./screenshots/overview.png "Thingsboardlogic Overview")
+
+![Alt text](./screenshots/add.png "Thingsboardlogic Add new Watcher")
+
 ## Author
 
 * **Peter Holzer** - [e1425797@student.tuwien.ac.at](mailto:e1425797@student.tuwien.ac.at) - [GitHub Profile](https://github.com/PeHo89) - Student at Vienna University of Technology with field of study 'Information and Software Engeneering' (bachelor degree course)
